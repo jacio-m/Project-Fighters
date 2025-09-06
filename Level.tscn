@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://btsywply3vs5l" path="res://Level/Sprites/tileset.png" id="1_t7iv1"]
 [ext_resource type="PackedScene" uid="uid://dacm4f6lonb4g" path="res://Player.tscn" id="2_2nifc"]
-[ext_resource type="Script" uid="uid://eggdytk2s32j" path="res://Scripts/camera.gd" id="3_2nifc"]
+[ext_resource type="Script" uid="uid://eggdytk2s32j" path="res://Player/Sprites/Idle/Scripts/camera.gd" id="3_2nifc"]
 [ext_resource type="AudioStream" uid="uid://c8cpgrqqkyyu8" path="res://rpg_bt010.ogg" id="4_wkftn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wkftn"]

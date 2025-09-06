@@ -1,11 +1,11 @@
 [gd_scene load_steps=51 format=3 uid="uid://dacm4f6lonb4g"]
 
-[ext_resource type="Texture2D" uid="uid://iichjfa1gg1g" path="res://Player/idle1.png" id="1_dm7nj"]
+[ext_resource type="Texture2D" uid="uid://iichjfa1gg1g" path="res://Player/Sprites/Idle/idle1.png" id="1_dm7nj"]
 [ext_resource type="Script" uid="uid://cvtwmo17d57wy" path="res://Player/Scripts/idle.gd" id="1_jatw7"]
 [ext_resource type="Script" uid="uid://dhbg01at0vk0e" path="res://Player/Scripts/player.gd" id="1_r3kul"]
-[ext_resource type="Texture2D" uid="uid://bunh6sftvjqq2" path="res://Player/idle2.png" id="2_3mea3"]
-[ext_resource type="Texture2D" uid="uid://clqt2lfx68xxi" path="res://Player/idle3.png" id="3_7v5gs"]
-[ext_resource type="Texture2D" uid="uid://dn13mpimgq5dv" path="res://Player/idle4.png" id="4_8sa4y"]
+[ext_resource type="Texture2D" uid="uid://bunh6sftvjqq2" path="res://Player/Sprites/Idle/idle2.png" id="2_3mea3"]
+[ext_resource type="Texture2D" uid="uid://clqt2lfx68xxi" path="res://Player/Sprites/Idle/idle3.png" id="3_7v5gs"]
+[ext_resource type="Texture2D" uid="uid://dn13mpimgq5dv" path="res://Player/Sprites/Idle/idle4.png" id="4_8sa4y"]
 [ext_resource type="Texture2D" uid="uid://v3vci8jc1ocu" path="res://Player/Sprites/Walk/walk1.png" id="5_3nb2p"]
 [ext_resource type="Texture2D" uid="uid://d30iksdky2iqd" path="res://Player/Sprites/Walk/walk2.png" id="6_d7xyo"]
 [ext_resource type="Texture2D" uid="uid://coojltblrilob" path="res://Player/Sprites/Jump/jump1.png" id="6_sg6sq"]
@@ -35,8 +35,8 @@
 [ext_resource type="AudioStream" uid="uid://cu28lfx1e1hpl" path="res://punch-kick-46882.mp3" id="28_48og4"]
 [ext_resource type="Script" uid="uid://flub3ke4c72c" path="res://Player/Scripts/punch.gd" id="33_3tfrk"]
 [ext_resource type="Script" uid="uid://c6mamp3sx6681" path="res://Player/Scripts/kick.gd" id="34_m7dl7"]
-[ext_resource type="Script" uid="uid://ygwo71wg85vs" path="res://Scripts/hit_box.gd" id="35_xmpta"]
-[ext_resource type="Script" uid="uid://cdj182til4fit" path="res://Scripts/hurt_box.gd" id="36_xmpta"]
+[ext_resource type="Script" uid="uid://ygwo71wg85vs" path="res://Player/Sprites/Idle/Scripts/hit_box.gd" id="35_xmpta"]
+[ext_resource type="Script" uid="uid://cdj182til4fit" path="res://Player/Sprites/Idle/Scripts/hurt_box.gd" id="36_xmpta"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x70vp"]
 animations = [{
@@ -234,7 +234,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_ravlb"]
 resource_name = "Kick"
-length = 1.20002
+length = 1.00002
 step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -486,6 +486,7 @@ size = Vector2(14, 41)
 script = ExtResource("1_r3kul")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4, 9)
 sprite_frames = SubResource("SpriteFrames_x70vp")
 animation = &"Idle"
 frame = 3

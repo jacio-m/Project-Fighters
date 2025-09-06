@@ -2,13 +2,13 @@ class_name Camera
 extends Camera2D 
 
 const INIT_ZOOM: Vector2 = Vector2.ONE * 4
-const INIT_OFFSET: Vector2 = Vector2.ZERO
+const INIT_OFFSET: Vector2 = Vector2.ZERO 
 
 var cur_zoom: Vector2 = INIT_ZOOM
 var cur_offset: Vector2 = INIT_OFFSET
 
 var shake_recov_fac: float = 1
-var zoom_recov_fac: float = 1
+var zoom_recov_fac: float = 2
 
 func _ready():
 	zoom = INIT_ZOOM
