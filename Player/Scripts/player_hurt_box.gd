@@ -11,3 +11,4 @@ func on_area_entered(hit_box: HitBox) -> void:
 	super(hit_box)
 	hitting_area = hit_box.owner
 	state_machine.change_state(pain_state)
+	add_game_juice()

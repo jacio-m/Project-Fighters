@@ -10,11 +10,10 @@ func _ready():
 	
 func on_area_entered(hit_box: HitBox) -> void:
 	if hit_box == null: return
-	#TODO deal demage
-	print("Damage Dealt")
 	
 func add_game_juice() -> void:
 	engine_slow()
+	owner.get_node("HitSFX").play()
 	camera.set_zoom_str(1.05)
 	camera.set_shake_str(Vector2(8, 8))
 

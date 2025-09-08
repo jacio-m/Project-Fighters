@@ -25,11 +25,16 @@ func process_input(event: InputEvent) -> State:
 func process_physics(delta: float) -> State:
 	push_back()
 	return super(delta)
-
-func push_back() -> void:
-	var push_dir: Vector2 = hurt_box.hitting_area.global_position - player.global_position
-	player.velocity.x += push_dir.x * 5
 	
 func process_frame(delta: float) -> State:
 	if has_pained: return idle_state
 	return super(delta)
+	
+func push_back() -> void:
+	var push_dir: Vector2 = hurt_box.hitting_area.global_position - player.global_position
+	player.velocity.x += push_dir.x * 0.25
+	
+func add_game_juice() -> void:
+	push_back()
+	camera.set_zoom_str(1.0125)
+	camera.set_shake_str(Vector2(4, 4))
