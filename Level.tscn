@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://ct1qmud0p1fee"]
+[gd_scene load_steps=9 format=3 uid="uid://ct1qmud0p1fee"]
 
 [ext_resource type="Texture2D" uid="uid://btsywply3vs5l" path="res://Level/Sprites/tileset.png" id="1_t7iv1"]
 [ext_resource type="PackedScene" uid="uid://dacm4f6lonb4g" path="res://Player.tscn" id="2_2nifc"]
 [ext_resource type="Script" uid="uid://eggdytk2s32j" path="res://Player/Sprites/Idle/Scripts/camera.gd" id="3_2nifc"]
 [ext_resource type="AudioStream" uid="uid://c8cpgrqqkyyu8" path="res://rpg_bt010.ogg" id="4_wkftn"]
+[ext_resource type="Script" uid="uid://ygwo71wg85vs" path="res://Player/Sprites/Idle/Scripts/hit_box.gd" id="6_mxnmf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wkftn"]
 texture = ExtResource("1_t7iv1")
@@ -548,6 +549,8 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_wkftn")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q4iis"]
+
 [node name="Level" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -574,3 +577,12 @@ stream = ExtResource("4_wkftn")
 volume_db = -6.0
 autoplay = true
 parameters/looping = false
+
+[node name="HitBox" type="Area2D" parent="."]
+script = ExtResource("6_mxnmf")
+metadata/_custom_type_script = "uid://ygwo71wg85vs"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(132, 44)
+shape = SubResource("RectangleShape2D_q4iis")
+debug_color = Color(0.962069, 0, 0.506715, 0.42)
