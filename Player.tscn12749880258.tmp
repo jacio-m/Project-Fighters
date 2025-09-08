@@ -38,7 +38,7 @@
 [ext_resource type="Script" uid="uid://flub3ke4c72c" path="res://Player/Scripts/punch.gd" id="33_3tfrk"]
 [ext_resource type="Script" uid="uid://c6mamp3sx6681" path="res://Player/Scripts/kick.gd" id="34_m7dl7"]
 [ext_resource type="Script" uid="uid://ygwo71wg85vs" path="res://Player/Sprites/Idle/Scripts/hit_box.gd" id="35_xmpta"]
-[ext_resource type="Script" uid="uid://c5kaa726cdl7s" path="res://Player/Scripts/player_hurt_box.gd" id="36_f7new"]
+[ext_resource type="Script" uid="uid://cdj182til4fit" path="res://Player/Sprites/Idle/Scripts/hurt_box.gd" id="36_xmpta"]
 [ext_resource type="Script" uid="uid://b5bcaw4o8qek8" path="res://Player/Scripts/pain.gd" id="39_ravlb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x70vp"]
@@ -585,7 +585,7 @@ jump_state = NodePath("../Jump")
 pain_state = NodePath(".")
 
 [node name="HurtBox" type="Area2D" parent="State Machine/Pain"]
-script = ExtResource("36_f7new")
+script = ExtResource("36_xmpta")
 metadata/_custom_type_script = "uid://cdj182til4fit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="State Machine/Pain/HurtBox"]

@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://ct1qmud0p1fee"]
+[gd_scene load_steps=12 format=3 uid="uid://ct1qmud0p1fee"]
 
 [ext_resource type="Texture2D" uid="uid://btsywply3vs5l" path="res://Level/Sprites/tileset.png" id="1_t7iv1"]
 [ext_resource type="PackedScene" uid="uid://dacm4f6lonb4g" path="res://Player.tscn" id="2_2nifc"]
 [ext_resource type="Script" uid="uid://eggdytk2s32j" path="res://Player/Sprites/Idle/Scripts/camera.gd" id="3_2nifc"]
 [ext_resource type="AudioStream" uid="uid://c8cpgrqqkyyu8" path="res://rpg_bt010.ogg" id="4_wkftn"]
+[ext_resource type="Texture2D" uid="uid://bqvfnix1m4fpl" path="res://enemy.png" id="5_m3clv"]
+[ext_resource type="Script" uid="uid://cdj182til4fit" path="res://Player/Sprites/Idle/Scripts/hurt_box.gd" id="6_m3clv"]
+[ext_resource type="Script" uid="uid://ygwo71wg85vs" path="res://Player/Sprites/Idle/Scripts/hit_box.gd" id="6_mxnmf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wkftn"]
 texture = ExtResource("1_t7iv1")
@@ -548,6 +551,12 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_wkftn")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mxnmf"]
+size = Vector2(20, 43)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4eo0i"]
+size = Vector2(20, 13)
+
 [node name="Level" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -574,3 +583,26 @@ stream = ExtResource("4_wkftn")
 volume_db = -6.0
 autoplay = true
 parameters/looping = false
+
+[node name="Enemy" type="Sprite2D" parent="."]
+position = Vector2(93, 58)
+texture = ExtResource("5_m3clv")
+flip_h = true
+
+[node name="HurtBox" type="Area2D" parent="Enemy"]
+script = ExtResource("6_m3clv")
+metadata/_custom_type_script = "uid://cdj182til4fit"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/HurtBox"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_mxnmf")
+debug_color = Color(0.958607, 0, 0.526211, 0.42)
+
+[node name="HitBox" type="Area2D" parent="Enemy"]
+script = ExtResource("6_mxnmf")
+metadata/_custom_type_script = "uid://ygwo71wg85vs"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/HitBox"]
+position = Vector2(-4, -2)
+shape = SubResource("RectangleShape2D_4eo0i")
+debug_color = Color(0.612448, 0.537964, 0, 0.42)

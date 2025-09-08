@@ -12,6 +12,7 @@ var jump_anim: String = "Jump"
 var fall_anim: String = "Fall"
 var punch_anim: String = "Punch"
 var kick_anim: String = "Kick"
+var pain_anim: String = "Pain"
 
 
 @export_group("States")
@@ -21,6 +22,7 @@ var kick_anim: String = "Kick"
 @export var fall_state: PlayerState
 @export var punch_state: PlayerState
 @export var kick_state: PlayerState
+@export var pain_state: PlayerState
 
 
 var sprite_flipped: bool = false
