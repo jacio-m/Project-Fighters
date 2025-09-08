@@ -494,7 +494,7 @@ size = Vector2(14, 41)
 script = ExtResource("1_r3kul")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(-4, 0)
+position = Vector2(3, -8.5)
 sprite_frames = SubResource("SpriteFrames_x70vp")
 animation = &"Idle"
 frame = 3
@@ -505,7 +505,7 @@ libraries = {
 }
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(-5, 11)
+position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_wo5nf")
 
 [node name="HitSFX" type="AudioStreamPlayer" parent="."]
@@ -555,7 +555,7 @@ script = ExtResource("35_xmpta")
 metadata/_custom_type_script = "uid://ygwo71wg85vs"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="State Machine/Punch/HitBox"]
-position = Vector2(27, -1)
+position = Vector2(34, -9.5)
 shape = SubResource("RectangleShape2D_mrbh7")
 disabled = true
 debug_color = Color(0.637707, 0.526017, 1.15514e-06, 0.42)
@@ -571,7 +571,7 @@ script = ExtResource("35_xmpta")
 metadata/_custom_type_script = "uid://ygwo71wg85vs"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="State Machine/Kick/HitBox"]
-position = Vector2(16.25, 5)
+position = Vector2(23.25, -3.5)
 shape = SubResource("RectangleShape2D_lrhq4")
 disabled = true
 debug_color = Color(0.65427, 0.517664, 7.70092e-07, 0.42)
@@ -584,6 +584,7 @@ jump_state = NodePath("../Jump")
 pain_state = NodePath(".")
 
 [node name="HurtBox" type="Area2D" parent="State Machine/Pain"]
+position = Vector2(7, -8.5)
 script = ExtResource("36_f7new")
 metadata/_custom_type_script = "uid://cdj182til4fit"
 
