@@ -29,4 +29,4 @@ func process_frame(delta: float) -> State:
 
 func add_game_juice() -> void:
 	camera.set_zoom_str(1.1)
-	camera.set_shake_str(Vector2(6, 6))
+	camera.set_shake_str(Vector2(8, 8))

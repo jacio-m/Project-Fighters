@@ -11,7 +11,7 @@ func enter() -> void:
 	else: hitbox.scale.x = 1
 	player.animation.play(kick_anim)
 	player.animation.animation_finished.connect(func(_anim): has_attacked = true)
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.6).timeout
 	player.get_node("HitSFX").play()
 	
 func process_input(event: InputEvent) -> State:
@@ -24,5 +24,5 @@ func process_input(event: InputEvent) -> State:
 	
 func process_frame(delta: float) -> State:
 	super(delta)
-	if has_attacked: return idle_state
+	if has_attacked: return idle_state 
 	return null
