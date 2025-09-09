@@ -20,4 +20,4 @@ func OrigClrRet():
 	label.modulate = OrigClr
 
 func update_label_text():
-	label.text = str(ceil(time.time_left))
+	label.text = str(int(time.time_left))
