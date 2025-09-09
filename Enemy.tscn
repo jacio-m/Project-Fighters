@@ -1,12 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://cggui1poivrca"]
+[gd_scene load_steps=10 format=3 uid="uid://cggui1poivrca"]
 
-[ext_resource type="Script" uid="uid://c228gvuymdbfx" path="res://Enemy/Scripts/enemy.gd" id="1_qp131"]
 [ext_resource type="Texture2D" uid="uid://cnmifobyl6lgv" path="res://Enemy/Sprites/enemy2.png" id="2_6do27"]
 [ext_resource type="Texture2D" uid="uid://dodnegjwedhux" path="res://Enemy/Sprites/enemy3.png" id="3_rvmyp"]
 [ext_resource type="Texture2D" uid="uid://cnaqitnth4rfs" path="res://Enemy/Sprites/enemy4.png" id="4_2nxwx"]
 [ext_resource type="Texture2D" uid="uid://bqvfnix1m4fpl" path="res://Enemy/Sprites/enemy.png" id="5_52xpa"]
-[ext_resource type="Script" uid="uid://cn332q847s6ra" path="res://Enemy/Scripts/enemystatemachine.gd" id="6_rvmyp"]
-[ext_resource type="Script" uid="uid://kt5f4c25rrvr" path="res://Enemy/Scripts/enemy_idle.gd" id="7_2nxwx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jdgko"]
 animations = [{
@@ -27,6 +24,9 @@ animations = [{
 "name": &"Enemy Idle",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6d4v"]
+size = Vector2(20, 46)
 
 [sub_resource type="Animation" id="Animation_j4qr3"]
 resource_name = "Idle"
@@ -91,15 +91,14 @@ _data = {
 &"RESET": SubResource("Animation_73x2u")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4v6dm"]
-size = Vector2(20, 44)
-
 [node name="Enemy" type="CharacterBody2D"]
-script = ExtResource("1_qp131")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jdgko")
 animation = &"Idle"
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_e6d4v")
 
 [node name="Animation" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite")
@@ -108,10 +107,5 @@ libraries = {
 }
 
 [node name="Enemy State Machine" type="Node2D" parent="."]
-script = ExtResource("6_rvmyp")
 
 [node name="Enemy Idle" type="Node2D" parent="Enemy State Machine"]
-script = ExtResource("7_2nxwx")
-
-[node name="Collision" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_4v6dm")
