@@ -1,9 +1,14 @@
 class_name Player
 extends CharacterBody2D
 
+signal healthChanged
+
 @onready var state_machine: StateMachine = $"State Machine"
 @onready var animation: AnimationPlayer = $Animation
 @onready var sprite: AnimatedSprite2D = $Sprite
+
+@export var maxHealth = 100
+@onready var currentHealth: int = maxHealth
 
 func _ready(): state_machine.init()
 

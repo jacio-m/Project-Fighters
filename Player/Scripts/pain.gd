@@ -9,6 +9,7 @@ func enter() -> void:
 	has_pained = false
 	player.animation.play(pain_anim)
 	player.animation.animation_finished.connect(func(_anim): has_pained = true)
+	was_damaged()
 	
 func exit(new_state: State = null) -> void:
 	super(new_state)
@@ -38,3 +39,10 @@ func add_game_juice() -> void:
 	push_back()
 	camera.set_zoom_str(1.0125)
 	camera.set_shake_str(Vector2(4, 4))
+
+func was_damaged():
+	player.currentHealth -= 7
+	if player.currentHealth < 0:
+		#TODO DEATH
+		player.currentHealth = player.maxHealth
+	player.healthChanged.emit()
