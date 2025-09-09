@@ -592,13 +592,10 @@ offset_bottom = 40.0
 
 [node name="ProgressBar" type="ProgressBar" parent="Control HP"]
 layout_mode = 0
-offset_left = -142.0
-offset_top = -82.0
+offset_left = -141.0
+offset_top = -79.0
 offset_right = -23.0
-offset_bottom = -55.0
-step = 1.0
-fill_mode = 1
-show_percentage = false
+offset_bottom = -52.0
 
 [node name="Control Timer" type="Control" parent="."]
 layout_mode = 3

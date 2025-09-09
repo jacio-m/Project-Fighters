@@ -1,24 +1,24 @@
 [gd_scene load_steps=10 format=3 uid="uid://cggui1poivrca"]
 
-[ext_resource type="Texture2D" uid="uid://cnmifobyl6lgv" path="res://Enemy/Sprites/enemy2.png" id="2_6do27"]
-[ext_resource type="Texture2D" uid="uid://dodnegjwedhux" path="res://Enemy/Sprites/enemy3.png" id="3_rvmyp"]
-[ext_resource type="Texture2D" uid="uid://cnaqitnth4rfs" path="res://Enemy/Sprites/enemy4.png" id="4_2nxwx"]
-[ext_resource type="Texture2D" uid="uid://bqvfnix1m4fpl" path="res://Enemy/Sprites/enemy.png" id="5_52xpa"]
+[ext_resource type="Texture2D" uid="uid://bqvfnix1m4fpl" path="res://Enemy/Sprites/enemy.png" id="1_kpr8r"]
+[ext_resource type="Texture2D" uid="uid://cnmifobyl6lgv" path="res://Enemy/Sprites/enemy2.png" id="2_1exfc"]
+[ext_resource type="Texture2D" uid="uid://dodnegjwedhux" path="res://Enemy/Sprites/enemy3.png" id="3_mo1ky"]
+[ext_resource type="Texture2D" uid="uid://cnaqitnth4rfs" path="res://Enemy/Sprites/enemy4.png" id="4_6bs3c"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jdgko"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_52xpa")
+"texture": ExtResource("1_kpr8r")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_6do27")
+"texture": ExtResource("2_1exfc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_rvmyp")
+"texture": ExtResource("3_mo1ky")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_2nxwx")
+"texture": ExtResource("4_6bs3c")
 }],
 "loop": true,
 "name": &"Enemy Idle",
