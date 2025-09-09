@@ -21,3 +21,6 @@ func OrigClrRet():
 
 func update_label_text():
 	label.text = str(int(time.time_left))
+	
+func get_time():
+	return time

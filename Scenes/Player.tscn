@@ -34,7 +34,7 @@
 [ext_resource type="Script" uid="uid://3mw8275p73k7" path="res://Player/Scripts/walk.gd" id="18_efikj"]
 [ext_resource type="Script" uid="uid://cg3trhda7lxwr" path="res://Player/Scripts/jump.gd" id="23_h84ma"]
 [ext_resource type="Script" uid="uid://bv5x3le52slpf" path="res://Player/Scripts/fall.gd" id="24_47wu6"]
-[ext_resource type="AudioStream" uid="uid://cu28lfx1e1hpl" path="res://punch-kick-46882.mp3" id="28_48og4"]
+[ext_resource type="AudioStream" uid="uid://cu28lfx1e1hpl" path="res://Sounds/punch-kick-46882.mp3" id="28_48og4"]
 [ext_resource type="Script" uid="uid://flub3ke4c72c" path="res://Player/Scripts/punch.gd" id="33_3tfrk"]
 [ext_resource type="Script" uid="uid://c6mamp3sx6681" path="res://Player/Scripts/kick.gd" id="34_m7dl7"]
 [ext_resource type="Script" uid="uid://ygwo71wg85vs" path="res://Player/Sprites/Idle/Scripts/hit_box.gd" id="35_xmpta"]
