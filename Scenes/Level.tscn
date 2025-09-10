@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://dshd5gg021vki" path="res://Level/Scripts/control_timer.gd" id="12_d6u53"]
 [ext_resource type="Texture2D" uid="uid://brrfrnbk4arjn" path="res://Level/UI/timerBackground.png" id="13_sypgb"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wkftn"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_esopp"]
 texture = ExtResource("1_t7iv1")
 0:0/0 = 0
 1:0/0 = 0
@@ -553,7 +553,7 @@ texture = ExtResource("1_t7iv1")
 [sub_resource type="TileSet" id="TileSet_q4iis"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
-sources/0 = SubResource("TileSetAtlasSource_wkftn")
+sources/0 = SubResource("TileSetAtlasSource_esopp")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_133si"]
 
@@ -573,7 +573,7 @@ layer_3/name = "Backdrop"
 layer_3/z_index = -2
 
 [node name="Player" parent="." instance=ExtResource("2_2nifc")]
-position = Vector2(-97, 56)
+position = Vector2(-97, 57)
 
 [node name="Camera" type="Camera2D" parent="." groups=["Camera"]]
 zoom = Vector2(4.5, 4.5)

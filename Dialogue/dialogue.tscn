@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgvbduw1uidje"]
+
+[ext_resource type="Texture2D" uid="uid://cqnehjsfwdgnb" path="res://Dialogue/dialogue_box.png" id="1_1ei20"]
+[ext_resource type="Script" uid="uid://87trewf706l5" path="res://Dialogue/dialogue.gd" id="1_je2oo"]
+
+[node name="Dialogue" type="CanvasLayer"]
+script = ExtResource("1_je2oo")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = 21.0
+offset_top = 598.0
+offset_right = 1253.0
+offset_bottom = 700.0
+texture = ExtResource("1_1ei20")
+region_rect = Rect2(0.849874, -0.474003, 14.3143, 16.8714)
+
+[node name="Tutorial" type="RichTextLabel" parent="NinePatchRect"]
+offset_left = 26.0
+offset_top = 19.0
+offset_right = 193.0
+offset_bottom = 59.0
+text = "Tutorial..."
