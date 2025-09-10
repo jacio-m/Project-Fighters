@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ct1qmud0p1fee"]
+[gd_scene load_steps=15 format=3 uid="uid://ct1qmud0p1fee"]
 
 [ext_resource type="Script" uid="uid://c128hcygwy300" path="res://Level/Scripts/level.gd" id="1_mxnmf"]
 [ext_resource type="Texture2D" uid="uid://btsywply3vs5l" path="res://Level/Sprites/tileset.png" id="1_t7iv1"]
@@ -6,9 +6,11 @@
 [ext_resource type="Script" uid="uid://eggdytk2s32j" path="res://Player/Sprites/Idle/Scripts/camera.gd" id="3_2nifc"]
 [ext_resource type="AudioStream" uid="uid://c8cpgrqqkyyu8" path="res://Sounds/rpg_bt010.ogg" id="4_wkftn"]
 [ext_resource type="Script" uid="uid://cxwlf03hvhi6" path="res://Scenes/healthbar.gd" id="7_5rrr5"]
+[ext_resource type="Texture2D" uid="uid://b4pv1cubwlx7a" path="res://Level/UI/healthbarUnder.png" id="7_esopp"]
 [ext_resource type="Script" uid="uid://ygwo71wg85vs" path="res://Player/Sprites/Idle/Scripts/hit_box.gd" id="7_or7tv"]
+[ext_resource type="Texture2D" uid="uid://qfbl1dad4rjg" path="res://Level/UI/healthbarProgress.png" id="8_b10nm"]
 [ext_resource type="Script" uid="uid://dshd5gg021vki" path="res://Level/Scripts/control_timer.gd" id="12_d6u53"]
-[ext_resource type="Texture2D" uid="uid://brrfrnbk4arjn" path="res://Level/UI/black_square.png" id="13_sypgb"]
+[ext_resource type="Texture2D" uid="uid://brrfrnbk4arjn" path="res://Level/UI/timerBackground.png" id="13_sypgb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wkftn"]
 texture = ExtResource("1_t7iv1")
@@ -583,11 +585,6 @@ volume_db = -6.0
 autoplay = true
 parameters/looping = false
 
-[node name="BgTimer" type="Sprite2D" parent="."]
-position = Vector2(-1, -89)
-scale = Vector2(0.84, 1)
-texture = ExtResource("13_sypgb")
-
 [node name="HitBox" type="Area2D" parent="."]
 position = Vector2(-141, -79)
 script = ExtResource("7_or7tv")
@@ -598,22 +595,17 @@ position = Vector2(253, 133)
 shape = SubResource("RectangleShape2D_133si")
 debug_color = Color(0.957341, 0, 0.533094, 0.42)
 
-[node name="Control HP" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="ProgressBar" type="ProgressBar" parent="Control HP" node_paths=PackedStringArray("player")]
-layout_mode = 0
-offset_left = -159.0
-offset_top = -89.0
-offset_right = -23.0
-offset_bottom = -62.0
-step = 1.0
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." node_paths=PackedStringArray("player")]
+offset_left = -160.0
+offset_top = -90.0
+offset_right = -22.0
+offset_bottom = -74.0
 value = 100.0
+nine_patch_stretch = true
+texture_under = ExtResource("7_esopp")
+texture_progress = ExtResource("8_b10nm")
 script = ExtResource("7_5rrr5")
-player = NodePath("../../Player")
+player = NodePath("../Player")
 
 [node name="Control Timer" type="Control" parent="."]
 layout_mode = 3
@@ -628,12 +620,17 @@ OrigClr = Color(1, 1, 1, 1)
 wait_time = 9.535
 one_shot = true
 
+[node name="BgTimer" type="Sprite2D" parent="Control Timer"]
+position = Vector2(-5.96046e-08, -83.75)
+scale = Vector2(1.82, 1.62)
+texture = ExtResource("13_sypgb")
+
 [node name="Label" type="Label" parent="Control Timer"]
 layout_mode = 0
-offset_left = -49.0
-offset_top = -88.0
-offset_right = 45.0
-offset_bottom = -65.0
+offset_left = -48.0
+offset_top = -92.75
+offset_right = 46.0
+offset_bottom = -69.75
 theme_override_colors/font_shadow_color = Color(0.505882, 0.505882, 0.505882, 1)
 text = "Timer"
 horizontal_alignment = 1

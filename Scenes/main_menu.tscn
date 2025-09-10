@@ -27,6 +27,7 @@ offset_bottom = 386.0
 text = "Play"
 
 [node name="Tutorial Button" type="Button" parent="Main Menu Control"]
+layout_mode = 0
 offset_left = 551.0
 offset_top = 476.0
 offset_right = 655.0
