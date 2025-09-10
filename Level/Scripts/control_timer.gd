@@ -13,7 +13,7 @@ func _ready():
 	
 func _process(delta):
 	update_label_text()
-	if time.time_left <= 5:
+	if time.time_left <= 6:
 		label.modulate = RedClr
 		
 func OrigClrRet():

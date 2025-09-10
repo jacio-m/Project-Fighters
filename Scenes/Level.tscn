@@ -625,7 +625,7 @@ RedClr = Color(1, 0, 0, 1)
 OrigClr = Color(1, 1, 1, 1)
 
 [node name="Timer" type="Timer" parent="Control Timer"]
-wait_time = 10.0
+wait_time = 9.535
 one_shot = true
 
 [node name="Label" type="Label" parent="Control Timer"]
@@ -640,12 +640,13 @@ horizontal_alignment = 1
 
 [node name="TimeOut Label" type="Label" parent="."]
 visible = false
-offset_left = -69.0
+offset_left = -86.0
 offset_top = -32.0
-offset_right = 65.0
-offset_bottom = 17.0
+offset_right = 87.0
+offset_bottom = 43.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.505344, 0.505344, 0.505344, 1)
 text = "Time Out!
-Press R to Restart"
+Press R to Restart
+Press F for Main Menu"
 horizontal_alignment = 1

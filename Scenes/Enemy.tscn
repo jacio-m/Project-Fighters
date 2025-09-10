@@ -96,9 +96,9 @@ _data = {
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jdgko")
 animation = &"Idle"
-frame = 2
 
 [node name="Collision" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("RectangleShape2D_e6d4v")
 
 [node name="Animation" type="AnimationPlayer" parent="."]
