@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dacm4f6lonb4g" path="res://Scenes/Player.tscn" id="2_2nifc"]
 [ext_resource type="Script" uid="uid://eggdytk2s32j" path="res://Player/Sprites/Idle/Scripts/camera.gd" id="3_2nifc"]
 [ext_resource type="AudioStream" uid="uid://c8cpgrqqkyyu8" path="res://Sounds/rpg_bt010.ogg" id="4_wkftn"]
-[ext_resource type="Script" uid="uid://cxwlf03hvhi6" path="res://Scenes/healthbar.gd" id="7_5rrr5"]
+[ext_resource type="Script" uid="uid://cxwlf03hvhi6" path="res://Level/Scripts/healthbar.gd" id="7_5rrr5"]
 [ext_resource type="Texture2D" uid="uid://b4pv1cubwlx7a" path="res://Level/UI/healthbarUnder.png" id="7_esopp"]
 [ext_resource type="Script" uid="uid://ygwo71wg85vs" path="res://Player/Sprites/Idle/Scripts/hit_box.gd" id="7_or7tv"]
 [ext_resource type="Texture2D" uid="uid://qfbl1dad4rjg" path="res://Level/UI/healthbarProgress.png" id="8_b10nm"]

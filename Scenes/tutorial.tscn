@@ -1,17 +1,17 @@
 [gd_scene load_steps=15 format=3 uid="uid://coga3s6notblb"]
 
-[ext_resource type="Script" uid="uid://be3dfbj5ljkr2" path="res://Scenes/tutorial_level.gd" id="1_70gml"]
-[ext_resource type="Script" uid="uid://dmmskgm7lv22m" path="res://Scenes/control_tutorial.gd" id="1_ka2pi"]
+[ext_resource type="Script" uid="uid://be3dfbj5ljkr2" path="res://Level/Scripts/tutorial_level.gd" id="1_70gml"]
+[ext_resource type="Script" uid="uid://dmmskgm7lv22m" path="res://Level/Scripts/control_tutorial.gd" id="1_ka2pi"]
 [ext_resource type="Texture2D" uid="uid://btsywply3vs5l" path="res://Level/Sprites/tileset.png" id="1_on4kn"]
 [ext_resource type="PackedScene" uid="uid://dacm4f6lonb4g" path="res://Scenes/Player.tscn" id="2_70gml"]
 [ext_resource type="Script" uid="uid://eggdytk2s32j" path="res://Player/Sprites/Idle/Scripts/camera.gd" id="3_8va2t"]
 [ext_resource type="Texture2D" uid="uid://b4pv1cubwlx7a" path="res://Level/UI/healthbarUnder.png" id="4_8mnmb"]
 [ext_resource type="Texture2D" uid="uid://qfbl1dad4rjg" path="res://Level/UI/healthbarProgress.png" id="5_koko0"]
-[ext_resource type="Script" uid="uid://cxwlf03hvhi6" path="res://Scenes/healthbar.gd" id="6_lsb8r"]
+[ext_resource type="Script" uid="uid://cxwlf03hvhi6" path="res://Level/Scripts/healthbar.gd" id="6_lsb8r"]
 [ext_resource type="Script" uid="uid://dshd5gg021vki" path="res://Level/Scripts/control_timer.gd" id="7_ap3ea"]
 [ext_resource type="Texture2D" uid="uid://brrfrnbk4arjn" path="res://Level/UI/timerBackground.png" id="8_t6ver"]
 [ext_resource type="Texture2D" uid="uid://cqnehjsfwdgnb" path="res://Level/UI/dialogue_box.png" id="11_8va2t"]
-[ext_resource type="Script" uid="uid://c33c3adpnnd3s" path="res://Scenes/tutorial_line.gd" id="12_8mnmb"]
+[ext_resource type="Script" uid="uid://c33c3adpnnd3s" path="res://Level/Scripts/tutorial_line.gd" id="12_8mnmb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2nb4t"]
 texture = ExtResource("1_on4kn")
@@ -670,9 +670,9 @@ script = ExtResource("12_8mnmb")
 visible = false
 layout_mode = 0
 offset_left = -513.0
-offset_top = -383.0
+offset_top = -390.0
 offset_right = -169.0
-offset_bottom = -313.0
+offset_bottom = -320.0
 text = "But, your enemy also has his own health, so if you want to win, make sure that you beat him up!"
 script = ExtResource("12_8mnmb")
 
@@ -680,9 +680,9 @@ script = ExtResource("12_8mnmb")
 visible = false
 layout_mode = 0
 offset_left = -513.0
-offset_top = -384.0
+offset_top = -392.0
 offset_right = -92.0
-offset_bottom = -258.0
+offset_bottom = -266.0
 text = "Also see that timer? That's the time of the battle, if it ends, the round of the battle is over. If the round is over and no one has been defeated, the character with less health wins."
 script = ExtResource("12_8mnmb")
 
@@ -690,9 +690,9 @@ script = ExtResource("12_8mnmb")
 visible = false
 layout_mode = 0
 offset_left = -513.0
-offset_top = -383.0
+offset_top = -387.0
 offset_right = -171.0
-offset_bottom = -330.0
+offset_bottom = -334.0
 text = "And you're all set! Try beating up your enemy on a real battle now!"
 script = ExtResource("12_8mnmb")
 
