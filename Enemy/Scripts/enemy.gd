@@ -1,19 +1,9 @@
 class_name Enemy
 extends CharacterBody2D
 
-signal healthChanged
+@onready var animation: AnimationPlayer = $"Enemy Animation"
+@onready var sprite: AnimatedSprite2D = $"Enemy Sprite"
+@onready var enemy_idle_anim: String = "Enemy Idle"
 
-@onready var state_machine: EnemyStateMachine = $"Enemy State Machine"
-@onready var animation: AnimationPlayer = $Animation
-@onready var sprite: AnimatedSprite2D = $Sprite
-
-@export var maxHealth = 100
-@onready var currentHealth: int = maxHealth
-
-func _ready(): state_machine.init()
-
-func _process(delta): state_machine.process_frame(delta)
-
-func _physics_process(delta): state_machine.process_physics(delta)
-
-func _input(event): state_machine.process_input(event)
+func _ready(): 
+	animation.play(enemy_idle_anim)

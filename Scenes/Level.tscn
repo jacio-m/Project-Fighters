@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ct1qmud0p1fee"]
+[gd_scene load_steps=14 format=3 uid="uid://ct1qmud0p1fee"]
 
 [ext_resource type="Script" uid="uid://c128hcygwy300" path="res://Level/Scripts/level.gd" id="1_mxnmf"]
 [ext_resource type="Texture2D" uid="uid://btsywply3vs5l" path="res://Level/Sprites/tileset.png" id="1_t7iv1"]
@@ -7,8 +7,8 @@
 [ext_resource type="AudioStream" uid="uid://c8cpgrqqkyyu8" path="res://Sounds/rpg_bt010.ogg" id="4_wkftn"]
 [ext_resource type="Script" uid="uid://cxwlf03hvhi6" path="res://Level/Scripts/healthbar.gd" id="7_5rrr5"]
 [ext_resource type="Texture2D" uid="uid://b4pv1cubwlx7a" path="res://Level/UI/healthbarUnder.png" id="7_esopp"]
-[ext_resource type="Script" uid="uid://ygwo71wg85vs" path="res://Player/Sprites/Idle/Scripts/hit_box.gd" id="7_or7tv"]
 [ext_resource type="Texture2D" uid="uid://qfbl1dad4rjg" path="res://Level/UI/healthbarProgress.png" id="8_b10nm"]
+[ext_resource type="PackedScene" uid="uid://drpnsmg7xwmx6" path="res://Scenes/Enemy.tscn" id="11_esopp"]
 [ext_resource type="Script" uid="uid://dshd5gg021vki" path="res://Level/Scripts/control_timer.gd" id="12_d6u53"]
 [ext_resource type="Texture2D" uid="uid://brrfrnbk4arjn" path="res://Level/UI/timerBackground.png" id="13_sypgb"]
 
@@ -555,8 +555,6 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_esopp")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_133si"]
-
 [node name="Level" type="Node2D"]
 script = ExtResource("1_mxnmf")
 
@@ -584,16 +582,6 @@ stream = ExtResource("4_wkftn")
 volume_db = -6.0
 autoplay = true
 parameters/looping = false
-
-[node name="HitBox" type="Area2D" parent="."]
-position = Vector2(-141, -79)
-script = ExtResource("7_or7tv")
-metadata/_custom_type_script = "uid://ygwo71wg85vs"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(253, 133)
-shape = SubResource("RectangleShape2D_133si")
-debug_color = Color(0.957341, 0, 0.533094, 0.42)
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="." node_paths=PackedStringArray("player")]
 offset_left = -160.0
@@ -647,3 +635,7 @@ text = "Time Out!
 Press R to Restart
 Press F for Main Menu"
 horizontal_alignment = 1
+
+[node name="Enemy" parent="." instance=ExtResource("11_esopp")]
+position = Vector2(87, 48)
+scale = Vector2(-1, 1)
